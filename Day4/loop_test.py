@@ -10,3 +10,11 @@ for x in range(101):
     sum += x
 print('1~100的和是%d' % sum)
 """
+"""
+sum = 0
+x = 0
+while x < 100 :
+    x += 1
+    sum += x
+print('1~100的和是%d' % sum)
+"""
