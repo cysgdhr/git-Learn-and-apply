@@ -159,3 +159,57 @@ for factor in range(x, 0, -1):
         print('整数%d和整数%d的最小公倍数是%d' % (x, y, x * y // factor))
         break
 """
+
+"""
+打印以下三种三角形图案
+*
+**
+***
+****
+*****
+
+    *
+   **
+  ***
+ ****
+*****
+
+    *
+   ***
+  *****
+ *******
+*********
+Version: 0.01
+Author: cy
+"""
+
+Rows = int(input('请输入行数：'))
+
+for i in range(Rows):
+    for j in range(i + 1):
+        print('*', end = '')
+    print()
+
+for i in range(Rows):
+    for j in range(Rows):
+        if j < Rows - i - 1:
+            print(' ',end = '')
+        else:
+            print('*', end = '')
+    print()
+
+for i in range(Rows):
+    for j in range(Rows + i):
+        if j < Rows - i - 1:
+            print(' ', end = '')
+        else:
+            print('*',end = '')
+    print()
+"""
+for i in range(row):
+    for _ in range(row - i - 1):
+        print(' ', end='')
+    for _ in range(2 * i + 1):
+        print('*', end='')
+    print()
+"""
