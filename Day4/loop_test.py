@@ -106,6 +106,7 @@ for i in range(1, 10):
 Version: 0.01
 Author: cy
 """
+"""
 from math import sqrt
 
 num = int(input('请输入一个正整数：'))
@@ -120,4 +121,41 @@ if judge and num != 1:
     print ('%d是素数' % num)
 else:
     print('%d不是素数' % num)
+"""
 
+"""
+输入两个正整数计算他们的最大公约数和最小公倍数
+
+Version: 0.01
+Author: cy
+"""
+
+"""
+x = int(input('请输入第一个正整数：'))
+y = int(input('请输入第二个正整数：'))
+
+divisor = 0
+multiple = x * y
+remainder = x % y
+print('remainder %d' % remainder)
+while remainder != 0:
+    x = y
+    y = remainder
+    remainder = x % y
+divisor = y
+multiple = multiple // divisor
+print('最小公倍数是%d' % multiple)
+print('最大公约数是%d' % divisor)
+"""
+
+"""
+x = int(input('请输入第一个正整数：'))
+y = int(input('请输入第二个正整数：'))
+if x > y:
+    x, y = y, x
+for factor in range(x, 0, -1):
+    if x % factor == 0 and y % factor == 0:
+        print('整数%d和整数%d的最大公约数是%d' % (x, y, factor))
+        print('整数%d和整数%d的最小公倍数是%d' % (x, y, x * y // factor))
+        break
+"""
