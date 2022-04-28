@@ -68,6 +68,7 @@ while Guess != Answer:
         print('大一点')
 """
 
+"""
 #有break
 import random
 
@@ -84,5 +85,16 @@ while True:
         print('恭喜你猜对了')
         break
 print('你总共猜了%d次' % counter)
+"""
 
+"""
+输出乘法表口诀表
 
+Version: 0.01
+Author: cy
+"""
+
+for i in range(1, 10):
+    for j in range(1, i + 1):
+        print('%d * %d = %d' % (i, j, i * j), end = '\t')
+    print()
