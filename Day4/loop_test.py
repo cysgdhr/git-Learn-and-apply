@@ -93,8 +93,31 @@ print('你总共猜了%d次' % counter)
 Version: 0.01
 Author: cy
 """
-
+"""
 for i in range(1, 10):
     for j in range(1, i + 1):
         print('%d * %d = %d' % (i, j, i * j), end = '\t')
     print()
+"""
+
+"""
+输入一个正整数判断它是不是素数
+
+Version: 0.01
+Author: cy
+"""
+from math import sqrt
+
+num = int(input('请输入一个正整数：'))
+root = int(sqrt(num))
+print('root = %d' % root)
+judge = True
+for x in range(2, root + 1):
+    if num % x == 0:
+        judge = False
+        break      
+if judge and num != 1:
+    print ('%d是素数' % num)
+else:
+    print('%d不是素数' % num)
+
