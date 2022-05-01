@@ -152,14 +152,30 @@ for Fre in range(0, 20):
     else:
         print('%d' % Number1, end=' ')
 """
+"""
 a = 0
 b = 1
 for _ in range(20):
     a, b = b, a + b
     print(a, end=' ')
+"""
 
 
+"""
+找出1000以内的完美数
 
+Version: 0.01
+Author: cy
+"""
+from math import sqrt
 
-
-
+Sum = 0
+for Num in range(2, 10000):
+    for x in range(1, int(sqrt(Num)) + 1):
+        if Num % x == 0:
+            Sum += x
+            if x != 1 and Num // x != x:
+                Sum += Num // x
+    if Num == Sum:
+        print(Num, end=' ')
+    Sum = 0
