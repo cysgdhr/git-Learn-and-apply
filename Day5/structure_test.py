@@ -139,7 +139,7 @@ print('你破产了，游戏结束!')
 Version: 0.01
 Author: cy
 """
-
+"""
 Number1 = 1
 Number2 = 1
 print('开始生成斐波那契数列：')
@@ -151,4 +151,15 @@ for Fre in range(0, 20):
         Number2 = Number3
     else:
         print('%d' % Number1, end=' ')
+"""
+a = 0
+b = 1
+for _ in range(20):
+    a, b = b, a + b
+    print(a, end=' ')
+
+
+
+
+
 
