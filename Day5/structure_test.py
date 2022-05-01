@@ -97,6 +97,7 @@ while Principal != 0:
 print('你输光了')
 """
 
+"""
 #答案
 from random import randint
 money = 1000
@@ -130,3 +131,24 @@ while money > 0:
         else:
             needs_go_on = True
 print('你破产了，游戏结束!')
+"""
+
+"""
+生成**斐波那契数列**的前20个数。
+
+Version: 0.01
+Author: cy
+"""
+
+Number1 = 1
+Number2 = 1
+print('开始生成斐波那契数列：')
+for Fre in range(0, 20):
+    if Fre >= 2:
+        print('%d' % (Number1 + Number2), end=' ')
+        Number3 = Number1 + Number2
+        Number1 = Number2
+        Number2 = Number3
+    else:
+        print('%d' % Number1, end=' ')
+
