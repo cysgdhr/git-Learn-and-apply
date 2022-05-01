@@ -167,6 +167,8 @@ for _ in range(20):
 Version: 0.01
 Author: cy
 """
+
+"""
 from math import sqrt
 
 Sum = 0
@@ -179,3 +181,17 @@ for Num in range(2, 10000):
     if Num == Sum:
         print(Num, end=' ')
     Sum = 0
+"""
+
+#答案
+import math
+
+for num in range(2, 10000):
+    result = 0
+    for factor in range(1, int(math.sqrt(num)) + 1):
+        if num % factor == 0:
+            result += factor
+            if factor > 1 and num // factor != factor:
+                result += num // factor
+    if result == num:
+        print(num)
