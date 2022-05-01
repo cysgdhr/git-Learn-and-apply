@@ -183,6 +183,7 @@ for Num in range(2, 10000):
     Sum = 0
 """
 
+"""
 #答案
 import math
 
@@ -194,4 +195,23 @@ for num in range(2, 10000):
             if factor > 1 and num // factor != factor:
                 result += num // factor
     if result == num:
+        print(num)
+"""
+
+"""
+输出100以内所有的素数
+
+Version: 0.01
+Author: cy
+"""
+
+import math
+
+for num in range(2, 100):
+    prime = True
+    for factor in range(2, int(math.sqrt(num)) + 1):
+        if num % factor == 0 and factor != num:
+            prime = False
+            break
+    if prime == True:
         print(num)
