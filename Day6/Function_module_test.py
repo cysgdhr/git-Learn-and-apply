@@ -69,6 +69,7 @@ Version: 0.01
 Author: cy
 """
 
+"""
 def is_palindrome(num):
 #判断一个数是不是回文数
     temp = num
@@ -77,4 +78,17 @@ def is_palindrome(num):
         total = total * 10 + temp % 10
         temp //= 10
     return total == num
+"""
 
+"""
+判断一个数是不是素数的函数
+
+Version: 0.01
+Author: cy
+"""
+
+def is_prime(num):
+    for x in range(2, (num ** 0.5) + 1):
+        if num % x == 0:
+            return False
+    return True if num != 1 else False
