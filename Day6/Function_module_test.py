@@ -38,12 +38,14 @@ print(fac(m) // fac(n) // fac(m - n))
 Version: 0.01
 Author: cy
 """
+"""
 def gcm(x, y):
-    """求最大公约数"""
+#求最大公约数
     (x, y) = (y, x) if x > y else (x, y)
     for value in range(x, 0, -1):
         if x % value == 0 and y % value == 0:
             return value
+"""
 """
     rem =  x % y
     while rem !=0:
@@ -53,7 +55,26 @@ def gcm(x, y):
     return y
 """
 
-
+"""
 def lcm(x, y):
-    """求最小公倍数"""
+#求最小公倍数
     return x * y // gcm(x, y)
+"""
+
+
+"""
+判断一个数是不是回文数
+
+Version: 0.01
+Author: cy
+"""
+
+def is_palindrome(num):
+#判断一个数是不是回文数
+    temp = num
+    total = 0
+    while temp > 0:
+        total = total * 10 + temp % 10
+        temp //= 10
+    return total == num
+
