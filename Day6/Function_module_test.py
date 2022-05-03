@@ -20,6 +20,7 @@ print(fm // fn // fmn)
 """
 
 #用函数来计算
+"""
 def fac(num):
     result = 1
     for n in range(num + 1):
@@ -29,3 +30,30 @@ def fac(num):
 m = int(input('m = '))
 n = int(input('n = '))
 print(fac(m) // fac(n) // fac(m - n))
+"""
+
+"""
+实现计算最大公约数和最小公倍数的函数
+
+Version: 0.01
+Author: cy
+"""
+def gcm(x, y):
+    """求最大公约数"""
+    (x, y) = (y, x) if x > y else (x, y)
+    for value in range(x, 0, -1):
+        if x % value == 0 and y % value == 0:
+            return value
+"""
+    rem =  x % y
+    while rem !=0:
+        x = y
+        y = rem
+        rem = x % y
+    return y
+"""
+
+
+def lcm(x, y):
+    """求最小公倍数"""
+    return x * y // gcm(x, y)
