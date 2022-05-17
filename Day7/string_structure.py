@@ -52,6 +52,7 @@ if __name__ == '__main__':
 Version: 0.01
 Author: cy
 """
+"""
 def suffix_get(filename, has_dot=False):
     pos = filename.rfind('.')
     if 0 < pos < len(filename) - 1:
@@ -60,8 +61,35 @@ def suffix_get(filename, has_dot=False):
     else:
         return ''
 def main():
-    print(suffix_get('string_structure.py'))
+    print(suffix_get('string_structure.py')
 if __name__ == '__main__':
     main()
+"""
+
+"""
+设计一个函数返回传入的列表中最大和第二大的元素的值
+
+Version: 0.01
+Author: cy
+"""
+"""
+def max2(x):
+    m1, m2 = (x[0], x[1]) if (x[0] > x[1]) else (x[1], x[0])
+    for index in range(2, len(x)):
+        if x[index] > m1:
+            m2 = m1
+            m1 = x[index]
+        elif x[index] > m2:
+            m2 = x[index]
+    return m1, m2
+"""
+
+
+
+
+
+
+
+
 
 
