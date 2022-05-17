@@ -28,7 +28,7 @@ if __name__ == '__main__':
 Version: 0.01
 Author: cy
 """
-
+"""
 import random
 def generate_code(code_len = 4):
 
@@ -42,6 +42,25 @@ def generate_code(code_len = 4):
 
 def main():
     print(generate_code(6))
+if __name__ == '__main__':
+    main()
+"""
+
+"""
+设计一个函数返回给定文件的后缀名
+
+Version: 0.01
+Author: cy
+"""
+def suffix_get(filename, has_dot=False):
+    pos = filename.rfind('.')
+    if 0 < pos < len(filename) - 1:
+        index = pos if has_dot else pos + 1
+        return filename[index:]
+    else:
+        return ''
+def main():
+    print(suffix_get('string_structure.py'))
 if __name__ == '__main__':
     main()
 
